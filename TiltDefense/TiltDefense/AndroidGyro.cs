@@ -9,7 +9,7 @@ public class AndroidGyro
     public void Init()
     {
         Gyroscope.ReadingChanged += Gyroscope_ReadingChanged;
-        Gyroscope.Start(sensorSpeed);
+        ToggleGyroscope();
     }
 
     public void ToggleGyroscope()

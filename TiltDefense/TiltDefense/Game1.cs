@@ -14,13 +14,9 @@ namespace TiltDefense
         private Texture2D pikaTexture;
         private Vector2 pikaPosition;
 
-        // Set speed delay for monitoring changes
-        private SensorSpeed sensorSpeed = SensorSpeed.UI;
-
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            gyro = new AndroidGyro();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -29,6 +25,7 @@ namespace TiltDefense
         {
             // TODO: Add your initialization logic here
             pikaPosition = new Vector2(_graphics.GraphicsDevice.Viewport.Width / 2, _graphics.GraphicsDevice.Viewport.Width / 2);
+            gyro = new AndroidGyro();
             gyro.Init();
             base.Initialize();
         }
