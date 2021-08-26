@@ -11,8 +11,6 @@ namespace TiltDefense
         private GraphicsDeviceManager _graphics;
         private AndroidGyro gyro;       // class to hand android gyroscope
         private SpriteBatch _spriteBatch;
-        private Texture2D pikaTexture;
-        private Vector2 pikaPosition;
 
         // Set speed delay for monitoring changes
         private SensorSpeed sensorSpeed = SensorSpeed.UI;
@@ -20,7 +18,7 @@ namespace TiltDefense
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            gyro = new AndroidGyro();
+            
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -28,7 +26,8 @@ namespace TiltDefense
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            pikaPosition = new Vector2(_graphics.GraphicsDevice.Viewport.Width / 2, _graphics.GraphicsDevice.Viewport.Width / 2);
+            
+            gyro = new AndroidGyro();
             gyro.Init();
             base.Initialize();
         }
@@ -38,7 +37,7 @@ namespace TiltDefense
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            pikaTexture = Content.Load<Texture2D>("pikachu");
+            
         }
 
         protected override void Update(GameTime gameTime)
@@ -56,19 +55,6 @@ namespace TiltDefense
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(
-                pikaTexture,
-                pikaPosition,
-                null,
-                Color.White,
-                0f,
-                new Vector2(pikaTexture.Width / 2, pikaTexture.Height / 2),
-                Vector2.One,
-                SpriteEffects.None,
-                0f
-            );
-            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
