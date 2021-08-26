@@ -12,8 +12,6 @@ namespace TiltDefense
         private AndroidGyro gyro;       // class to hand android gyroscope
         private SpriteBatch _spriteBatch;
 
-        // Set speed delay for monitoring changes
-        private SensorSpeed sensorSpeed = SensorSpeed.UI;
 
         public Game1()
         {
