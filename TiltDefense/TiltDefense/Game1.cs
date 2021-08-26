@@ -9,7 +9,7 @@ namespace TiltDefense
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        
+        private AndroidGyro gyro;       // class to hand android gyroscope
         private SpriteBatch _spriteBatch;
         private Texture2D pikaTexture;
         private Vector2 pikaPosition;
@@ -20,6 +20,7 @@ namespace TiltDefense
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            gyro = new AndroidGyro();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -28,32 +29,8 @@ namespace TiltDefense
         {
             // TODO: Add your initialization logic here
             pikaPosition = new Vector2(_graphics.GraphicsDevice.Viewport.Width / 2, _graphics.GraphicsDevice.Viewport.Width / 2);
-            Gyroscope.ReadingChanged += Gyroscope_ReadingChanged;
+            gyro.Init();
             base.Initialize();
-            ToggleGyroscope();
-        }
-
-        private void Gyroscope_ReadingChanged(object sender, GyroscopeChangedEventArgs e)
-        {
-            var data = e.Reading;
-            // Process Angular Velocity X, Y, and Z reported in rad/s
-            string tag = "Debuglog";
-            Log.Info(tag, $"Reading... X: {data.AngularVelocity.X}, Y: {data.AngularVelocity.Y}, Z: {data.AngularVelocity.Z}");
-        }
-
-        public void ToggleGyroscope()
-        {
-            try
-            {
-                if (Gyroscope.IsMonitoring)
-                    Gyroscope.Stop();
-                else
-                    Gyroscope.Start(sensorSpeed);
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature not supported on device
-            }
         }
 
         protected override void LoadContent()
@@ -70,8 +47,6 @@ namespace TiltDefense
                 Exit();
 
             // TODO: Add your update logic here
-
-
 
             base.Update(gameTime);
         }
