@@ -24,6 +24,9 @@ namespace TiltDefense
         {
             base.OnCreate(bundle);
 
+            // Adds library for accessing cross-platfrom native APIs
+            Xamarin.Essentials.Platform.Init(this, bundle);
+
             _game = new Game1();
             _view = _game.Services.GetService(typeof(View)) as View;
 

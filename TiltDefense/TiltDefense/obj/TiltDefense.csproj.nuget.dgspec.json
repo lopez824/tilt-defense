@@ -47,6 +47,10 @@
             "MonoGame.Framework.Android": {
               "target": "Package",
               "version": "[3.8.0.1641, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
             }
           }
         }
