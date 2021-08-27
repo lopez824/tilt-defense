@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Xamarin.Essentials;
@@ -9,10 +10,11 @@ namespace TiltDefense
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        private AndroidGyro gyro;       // class to hand android gyroscope
+        private NativeAPI nativeAPI;
         private SpriteBatch _spriteBatch;
         private Texture2D pikaTexture;
         private Vector2 pikaPosition;
+        private float pikaSpeed;
 
         public Game1()
         {
@@ -24,9 +26,10 @@ namespace TiltDefense
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            nativeAPI = new NativeAPI();
+            nativeAPI.Init();
             pikaPosition = new Vector2(_graphics.GraphicsDevice.Viewport.Width / 2, _graphics.GraphicsDevice.Viewport.Width / 2);
-            gyro = new AndroidGyro();
-            gyro.Init();
+            pikaSpeed = 300f;
             base.Initialize();
         }
 
@@ -44,6 +47,20 @@ namespace TiltDefense
                 Exit();
 
             // TODO: Add your update logic here
+
+            var kstate = Keyboard.GetState();
+
+            if (nativeAPI.Acceleration.Z > 0.3)
+                pikaPosition.Y -= pikaSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (nativeAPI.Acceleration.Z < -0.25)
+                pikaPosition.Y += pikaSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (nativeAPI.Acceleration.X > 0.4)
+                pikaPosition.X -= pikaSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (nativeAPI.Acceleration.X < -0.4)
+                pikaPosition.X += pikaSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             base.Update(gameTime);
         }
