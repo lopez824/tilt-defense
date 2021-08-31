@@ -11,7 +11,8 @@ public class Pillar
     public Vector2 position;
     public Color pillarColor;
     public Vector2 initialPosition;
-    private float speed = 300f;
+    private float speed = 500f;
+    private string name;
 
     public Pillar(Texture2D newTexture, Vector2 newPosition, Color newColor)
     {
@@ -19,29 +20,88 @@ public class Pillar
         initialPosition = newPosition;
         position = newPosition;
         pillarColor = newColor;
+        setName();
+    }
+
+    public void setName()
+    {
+        if (pillarColor.Equals(Color.Yellow))
+        {
+            name = "Yellow";
+        }
+        else if (pillarColor.Equals(Color.Blue))
+        {
+            name = "Blue";
+        }
+        else if (pillarColor.Equals(Color.Green))
+        {
+            name = "Green";
+        }
+        else if (pillarColor.Equals(Color.Red))
+        {
+            name = "Red";
+        }
+    }
+
+    public void checkBounds()
+    {
+        if (name == "Green" && position.X <= -155)
+        {
+            position.X = -155;
+        }
+        else if (name == "Green" && position.X >= 160)
+        {
+            position.X = 160;
+        }
+
+        if (name == "Yellow" && position.X <= -155)
+        {
+            position.X = -155;
+        }
+        else if (name == "Yellow" && position.X >= 160)
+        {
+            position.X = 160;
+        }
+
+        if (name == "Blue" && position.X >= 1120)
+        {
+            position.X = 1120;
+        }
+        else if (name == "Blue" && position.X <= 800)
+        {
+            position.X = 800;
+        }
+
+        if (name == "Red" && position.X >= 1120)
+        {
+            position.X = 1120;
+        }
+        else if (name == "Red" && position.X < 800)
+        {
+            position.X = 800;
+        }
     }
 
     public void Update(GameTime gameTime, float xAccel)
     {
-        if(xAccel > 0.4)
+        checkBounds();
+
+        if (xAccel > 0.4)
         {
-            position = initialPosition;
-            initialPosition.X -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            position.X -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
         else if(xAccel < -0.4)
         {
-            position = initialPosition;
-            initialPosition.X += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            position.X += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
-        else if(xAccel < 0.1 || xAccel > -0.1)
-        {
-            initialPosition = position;
-        }
+
+        //string tag = "Debuglog";
+        //Log.Info(tag, $"Pillar: {name}, X: {position.X}");
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(texture, new Rectangle((int)initialPosition.X, (int)initialPosition.Y, texture.Width, 100), null, pillarColor, 0f, new Vector2(texture.Width / 2, texture.Height / 2), SpriteEffects.None, 0f);
+        spriteBatch.Draw(texture, new Rectangle((int)position.X, (int)position.Y, texture.Width, 100), null, pillarColor, 0f, new Vector2(texture.Width / 2, texture.Height / 2), SpriteEffects.None, 0f);
     }
 }
 /*  Input Example
