@@ -13,18 +13,19 @@ namespace TiltDefense
         private GraphicsDeviceManager _graphics;
         private NativeAPI nativeAPI;
         private SpriteBatch _spriteBatch;
+        private Timer timer;
+        private List<Character> characters = new List<Character>();
+        private List<Pillar> pillars = new List<Pillar>();
+        private SpriteFont timerFont;
 
         private Texture2D mapTexture;
         private Texture2D pillarTexture;
-
         private Texture2D[] characterTextures = new Texture2D[2];
+
         private Vector2 spawnPositions;
         private Vector2 pillar1;
         private Vector2 pillar2;
         private Color[] pillarColors = new Color[2];
-
-        private List<Character> characters = new List<Character>();
-        private List<Pillar> pillars = new List<Pillar>();
 
         private float spawnTime = 0f;
         private bool pillarsCreated = false;
@@ -38,10 +39,10 @@ namespace TiltDefense
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
 
             nativeAPI = new NativeAPI();
             nativeAPI.Init();
+            timer = new Timer(600);
 
             spawnPositions = new Vector2(GraphicsDevice.Viewport.Width / 2, 0);
 
@@ -57,7 +58,7 @@ namespace TiltDefense
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            timerFont = Content.Load<SpriteFont>("Timer");
             mapTexture = Content.Load<Texture2D>("1LaneMap");
             pillarTexture = Content.Load<Texture2D>("Pillars");
             characterTextures[0] = Content.Load<Texture2D>("Human");
@@ -72,7 +73,7 @@ namespace TiltDefense
                 pillars.Add(new Pillar(pillarTexture, pillar2, pillarColors[1]));
                 pillarsCreated = true;
             }
-
+            timer.Update(gameTime);
             spawnTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
             foreach (Character character in characters)
             {
@@ -103,10 +104,9 @@ namespace TiltDefense
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
-
             _spriteBatch.Begin();
             _spriteBatch.Draw(mapTexture, new Rectangle(0, 0, GraphicsDevice.Viewport.Bounds.Width, GraphicsDevice.Viewport.Bounds.Height), Color.White);
+            _spriteBatch.DrawString(timerFont, "" + (int)timer.Time/60 + ":"+(int)timer.Time%60, new Vector2(0,0), Color.Black);
             foreach (Character character in characters)
             {
                 character.Draw(_spriteBatch);
