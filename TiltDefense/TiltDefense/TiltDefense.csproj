@@ -59,8 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity1.cs" />
-    <Compile Include="AndroidGyro.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="NativeAPI.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Pillar.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
