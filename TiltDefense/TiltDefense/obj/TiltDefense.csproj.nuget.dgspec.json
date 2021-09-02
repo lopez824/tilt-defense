@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lopez\\Documents\\GitHub\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {}
+    "C:\\Users\\u1377359\\Desktop\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lopez\\Documents\\GitHub\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {
+    "C:\\Users\\u1377359\\Desktop\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lopez\\Documents\\GitHub\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
+        "projectUniqueName": "C:\\Users\\u1377359\\Desktop\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
         "projectName": "TiltDefense",
-        "projectPath": "C:\\Users\\lopez\\Documents\\GitHub\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
-        "packagesPath": "C:\\Users\\lopez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lopez\\Documents\\GitHub\\tilt-defense\\TiltDefense\\TiltDefense\\obj\\",
+        "projectPath": "C:\\Users\\u1377359\\Desktop\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
+        "packagesPath": "C:\\Users\\u1377359\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\u1377359\\Desktop\\tilt-defense\\TiltDefense\\TiltDefense\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\u1377359\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

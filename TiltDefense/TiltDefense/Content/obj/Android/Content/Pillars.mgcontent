@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</SourceFile>
-  <SourceTime>2021-08-31T08:27:00.2722112-06:00</SourceTime>
-  <DestFile>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/Pillars.xnb</DestFile>
-  <DestTime>2021-08-31T08:31:33.8332491-06:00</DestTime>
+  <SourceFile>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</SourceFile>
+  <SourceTime>2021-09-02T10:09:53.9387492-06:00</SourceTime>
+  <DestFile>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/Pillars.xnb</DestFile>
+  <DestTime>2021-09-02T10:14:02.3839221-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T10:17:54-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
