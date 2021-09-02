@@ -14,9 +14,10 @@ namespace TiltDefense
         private NativeAPI nativeAPI;
         private SpriteBatch _spriteBatch;
         private Timer timer;
+        private Score score;
         private List<Character> characters = new List<Character>();
         private List<Pillar> pillars = new List<Pillar>();
-        private SpriteFont timerFont;
+        private SpriteFont uiFont;
 
         private Texture2D mapTexture;
         private Texture2D pillarTexture;
@@ -38,11 +39,11 @@ namespace TiltDefense
         }
 
         protected override void Initialize()
-        {
-
+        { 
             nativeAPI = new NativeAPI();
             nativeAPI.Init();
             timer = new Timer(600);
+            score = new Score();
 
             spawnPositions = new Vector2(GraphicsDevice.Viewport.Width / 2, 0);
 
@@ -58,7 +59,7 @@ namespace TiltDefense
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            timerFont = Content.Load<SpriteFont>("Timer");
+            uiFont = Content.Load<SpriteFont>("Timer");
             mapTexture = Content.Load<Texture2D>("1LaneMap");
             pillarTexture = Content.Load<Texture2D>("Pillars");
             characterTextures[0] = Content.Load<Texture2D>("Human");
@@ -93,6 +94,14 @@ namespace TiltDefense
             {
                 if (!characters[i].isVisible)
                 {
+                    if(characters[i].texture==characterTextures[0])
+					{
+                        score.ScoreValue++;
+					}
+                    else if(characters[i].texture == characterTextures[1])
+                    {
+                        score.ScoreValue--;
+                    }
                     characters.RemoveAt(i);
                 }
             }
@@ -106,7 +115,8 @@ namespace TiltDefense
 
             _spriteBatch.Begin();
             _spriteBatch.Draw(mapTexture, new Rectangle(0, 0, GraphicsDevice.Viewport.Bounds.Width, GraphicsDevice.Viewport.Bounds.Height), Color.White);
-            _spriteBatch.DrawString(timerFont, "" + (int)timer.Time/60 + ":"+(int)timer.Time%60, new Vector2(0,0), Color.Black);
+            _spriteBatch.DrawString(uiFont, "" + (int)timer.Time/60 + ":"+(int)timer.Time%60, new Vector2(0,0), Color.Black);
+            _spriteBatch.DrawString(uiFont, "Score: " + score.ScoreValue, new Vector2(GraphicsDevice.Viewport.Width-300, 0), Color.Black);
             foreach (Character character in characters)
             {
                 character.Draw(_spriteBatch);

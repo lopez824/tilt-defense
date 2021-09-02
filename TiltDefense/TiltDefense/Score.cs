@@ -16,5 +16,23 @@ namespace TiltDefense
 {
 	class Score
 	{
+		int scoreValue;
+
+		public int ScoreValue
+		{
+			get
+			{
+				return scoreValue;
+			}
+			set
+			{
+				scoreValue = value;
+			}
+		}
+
+		public Score()
+		{
+			this.ScoreValue = 0;
+		}
 	}
 }
