@@ -4,6 +4,7 @@
   <Platform>Android</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/1LaneMap.png</File>
     <File>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Human.png</File>
     <File>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Map1.png</File>
     <File>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Monster.png</File>
@@ -11,6 +12,7 @@
     <File>C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

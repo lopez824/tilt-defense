@@ -1,0 +1,7 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/1LaneMap.png","C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/1LaneMap.xnb","TextureProcessor","Texture2DContent",15230,9849685,0.4134777
+"C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Human.png","C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Human.xnb","TextureProcessor","Texture2DContent",6433,1000085,0.0169768
+"C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Map1.png","C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Map1.xnb","TextureProcessor","Texture2DContent",12838,9849685,0.179077
+"C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Monster.png","C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Monster.xnb","TextureProcessor","Texture2DContent",10244,1628261,0.0236992
+"C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/pikachu.png","C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/pikachu.xnb","TextureProcessor","Texture2DContent",5868,230485,0.0040678
+"C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png","C:/Users/u1377359/Desktop/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Pillars.xnb","TextureProcessor","Texture2DContent",19832,199765,0.0074837

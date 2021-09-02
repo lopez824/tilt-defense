@@ -1,5 +1,4 @@
-﻿//New Level Design Tings
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -19,9 +18,10 @@ namespace TiltDefense
         private Texture2D pillarTexture;
 
         private Texture2D[] characterTextures = new Texture2D[2];
-        private Vector2[] spawnPositions = new Vector2[3];
-        private Vector2[] pillarPositions = new Vector2[4];
-        private Color[] pillarColors = new Color[4];
+        private Vector2 spawnPositions;
+        private Vector2 pillar1;
+        private Vector2 pillar2;
+        private Color[] pillarColors = new Color[2];
 
         private List<Character> characters = new List<Character>();
         private List<Pillar> pillars = new List<Pillar>();
@@ -43,20 +43,13 @@ namespace TiltDefense
             nativeAPI = new NativeAPI();
             nativeAPI.Init();
 
-            spawnPositions[0] = new Vector2(GraphicsDevice.Viewport.Width / 4 - 25, 0);
-            spawnPositions[1] = new Vector2(GraphicsDevice.Viewport.Width / 2, 0);
-            spawnPositions[2] = new Vector2((3 * (GraphicsDevice.Viewport.Width / 4)) + 25, 0);
+            spawnPositions = new Vector2(GraphicsDevice.Viewport.Width / 2, 0);
 
-            pillarPositions[0] = new Vector2(0, GraphicsDevice.Viewport.Height * 0.8f);
-            pillarPositions[1] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.6f);
-            pillarPositions[2] = new Vector2(0, GraphicsDevice.Viewport.Height * 0.4f);
-            pillarPositions[3] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.2f);
+            pillar1 = new Vector2(0, GraphicsDevice.Viewport.Height * 0.75f);
+            pillar2 = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.25f);
 
             pillarColors[0] = Color.Yellow;
             pillarColors[1] = Color.Blue;
-            pillarColors[2] = Color.Green;
-            pillarColors[3] = Color.Red;
-
             base.Initialize();
         }
 
@@ -65,7 +58,7 @@ namespace TiltDefense
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            mapTexture = Content.Load<Texture2D>("Map1");
+            mapTexture = Content.Load<Texture2D>("1LaneMap");
             pillarTexture = Content.Load<Texture2D>("Pillars");
             characterTextures[0] = Content.Load<Texture2D>("Human");
             characterTextures[1] = Content.Load<Texture2D>("Monster");
@@ -73,17 +66,10 @@ namespace TiltDefense
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            // TODO: Add your update logic here
-
             if (!pillarsCreated)
             {
-                for (int i = 0; i < 4; i++)
-                {
-                    pillars.Add(new Pillar(pillarTexture, pillarPositions[i], pillarColors[i]));
-                }
+                pillars.Add(new Pillar(pillarTexture,pillar1,pillarColors[0]));
+                pillars.Add(new Pillar(pillarTexture, pillar2, pillarColors[1]));
                 pillarsCreated = true;
             }
 
@@ -99,10 +85,7 @@ namespace TiltDefense
             if (spawnTime >= 2)
             {
                 spawnTime = 0;
-                for (int i = 0; i < 3; i++)
-                {
-                    characters.Add(new Character(characterTextures[new Random().Next(0, 2)], spawnPositions[i]));
-                }
+                characters.Add(new Character(characterTextures[new Random().Next(0, 2)], spawnPositions));
             }
 
             for (int i = 0; i < characters.Count; i++)
