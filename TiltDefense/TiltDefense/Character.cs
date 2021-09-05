@@ -9,7 +9,7 @@ public class Character
     public Texture2D texture;
     public Vector2 velocity;
     public Vector2 position;
-
+    public Rectangle hitBox;
     public bool isVisible = true;
 
     public Character(Texture2D newTexture,Vector2 newPosition)
@@ -31,7 +31,8 @@ public class Character
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(texture, new Rectangle((int)position.X, (int)position.Y, 100, 100), null, Color.White, 0f, new Vector2(texture.Width / 2, texture.Height / 2), SpriteEffects.None, 0f);
+        hitBox = new Rectangle((int)position.X, (int)position.Y, 100, 100);
+        spriteBatch.Draw(texture, hitBox, null, Color.White, 0f, new Vector2(texture.Width / 2, texture.Height / 2), SpriteEffects.None, 0f);
     }
 
 

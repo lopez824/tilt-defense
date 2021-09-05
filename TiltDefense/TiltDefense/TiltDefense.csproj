@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Activity1.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Collision.cs" />
     <Compile Include="NativeAPI.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Pillar.cs" />

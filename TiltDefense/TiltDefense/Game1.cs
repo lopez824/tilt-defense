@@ -19,14 +19,16 @@ namespace TiltDefense
 
         private Texture2D[] characterTextures = new Texture2D[2];
         private Vector2[] spawnPositions = new Vector2[3];
-        private Vector2[] pillarPositions = new Vector2[4];
-        private Color[] pillarColors = new Color[4];
+        private Vector2[] pillarPositions = new Vector2[2];
+        private Color[] pillarColors = new Color[2];
 
         private List<Character> characters = new List<Character>();
         private List<Pillar> pillars = new List<Pillar>();
 
         private float spawnTime = 0f;
         private bool pillarsCreated = false;
+        private int test1 = 0;
+        private int test2 = 0;
 
         public Game1()
         {
@@ -47,14 +49,14 @@ namespace TiltDefense
             spawnPositions[2] = new Vector2((3 * (GraphicsDevice.Viewport.Width / 4)) + 25, 0);
 
             pillarPositions[0] = new Vector2(0, GraphicsDevice.Viewport.Height * 0.8f);
-            pillarPositions[1] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.6f);
-            pillarPositions[2] = new Vector2(0, GraphicsDevice.Viewport.Height * 0.4f);
-            pillarPositions[3] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.2f);
+            //pillarPositions[1] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.6f);
+            //pillarPositions[2] = new Vector2(0, GraphicsDevice.Viewport.Height * 0.4f);
+            pillarPositions[1] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.2f);
 
             pillarColors[0] = Color.Yellow;
-            pillarColors[1] = Color.Blue;
-            pillarColors[2] = Color.Green;
-            pillarColors[3] = Color.Red;
+            //pillarColors[1] = Color.Blue;
+            //pillarColors[2] = Color.Green;
+            pillarColors[1] = Color.Red;
 
             base.Initialize();
         }
@@ -79,7 +81,7 @@ namespace TiltDefense
 
             if (!pillarsCreated)
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < pillarPositions.Length; i++)
                 {
                     pillars.Add(new Pillar(pillarTexture, pillarPositions[i], pillarColors[i]));
                 }
@@ -91,9 +93,30 @@ namespace TiltDefense
             {
                 character.Update(GraphicsDevice);
             }
+
             foreach (Pillar pillar in pillars)
             {
                 pillar.Update(gameTime, nativeAPI.Acceleration.X);
+
+                // Collision Detection
+                for (int i = 0; i < characters.Count; i++)
+                {
+                    if (Collision.Check(characters[i].hitBox, pillar.hitBox))
+                    {
+                        // TODO: Collision code
+
+                        if (pillar.name == "Red")
+                        {
+                            test1++;
+                            Log.Info("debuglog", $"HIT RED {test1} times");
+                        }
+                        else if (pillar.name == "Yellow")
+                        {
+                            test2++;
+                            Log.Info("debuglog", $"HIT YELLOW {test2} times");
+                        }
+                    }
+                }
             }
             if (spawnTime >= 2)
             {
