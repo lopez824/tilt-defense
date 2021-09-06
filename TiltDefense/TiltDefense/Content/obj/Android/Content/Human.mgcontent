@@ -3,7 +3,11 @@
   <SourceFile>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Human.png</SourceFile>
   <SourceTime>2021-09-06T11:52:03.8717061-06:00</SourceTime>
   <DestFile>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/Human.xnb</DestFile>
+<<<<<<< HEAD
   <DestTime>2021-09-06T16:58:49.0457225-06:00</DestTime>
+=======
+  <DestTime>2021-09-06T16:25:38.5215634-06:00</DestTime>
+>>>>>>> SceneManagement
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T10:17:54-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

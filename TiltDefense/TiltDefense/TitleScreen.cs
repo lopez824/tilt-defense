@@ -54,11 +54,12 @@ namespace TiltDefense
                 if (tl.Position.X>startButtonPosition.X && tl.Position.X<startButtonPosition.X+startButton.Width && 
                     tl.Position.Y>startButtonPosition.Y&&tl.Position.Y<startButtonPosition.Y+startButton.Height)
                 {
-                    Log.Info("debugLog", $"Start Button Touched");
+                    Game.LoadGameplayScreen();
                 }
-                else
+                if (tl.Position.X > quitButtonPosition.X && tl.Position.X < quitButtonPosition.X + quitButton.Width 
+                    && tl.Position.Y > quitButtonPosition.Y && tl.Position.Y < quitButtonPosition.Y + quitButton.Height)
                 {
-                    Log.Info("debugLog", $"No");
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
                 }
             }
         }
@@ -69,7 +70,6 @@ namespace TiltDefense
             Game._spriteBatch.Draw(background, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Bounds.Height), Color.White);
             Game._spriteBatch.Draw(startButton, startButtonPosition, Color.White);
             Game._spriteBatch.Draw(quitButton, quitButtonPosition, Color.White);
-
             Game._spriteBatch.End();
         }
     }

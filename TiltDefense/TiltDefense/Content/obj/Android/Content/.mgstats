@@ -1,4 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+<<<<<<< HEAD
 "C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMusic.mp3","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/BackgroundMusic.xnb","SongProcessor","SongContent",4985593,133,3.6226766
 "C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Human.png","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/Human.xnb","TextureProcessor","Texture2DContent",6433,1000085,0.0669054
 "C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Map1.png","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/Map1.xnb","TextureProcessor","Texture2DContent",12838,9849685,0.3069646
@@ -8,3 +9,6 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/QuitButton.png","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/QuitButton.xnb","TextureProcessor","Texture2DContent",13442,146805,0.0070401
 "C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/StartButton.png","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/StartButton.xnb","TextureProcessor","Texture2DContent",17905,209653,0.0104506
 "C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/TitleScreenBg.jpg","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/TitleScreenBg.xnb","TextureProcessor","Texture2DContent",61580,8272885,0.2666593
+=======
+"C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMusic.mp3","C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/BackgroundMusic.xnb","SongProcessor","SongContent",4985593,133,3.767698
+>>>>>>> SceneManagement
