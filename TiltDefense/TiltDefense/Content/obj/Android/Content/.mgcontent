@@ -4,11 +4,11 @@
   <Platform>Android</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/Human.png</File>
-    <File>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/Map1.png</File>
-    <File>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/Monster.png</File>
-    <File>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/pikachu.png</File>
-    <File>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</File>
+    <File>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Human.png</File>
+    <File>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Map1.png</File>
+    <File>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Monster.png</File>
+    <File>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/pikachu.png</File>
+    <File>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

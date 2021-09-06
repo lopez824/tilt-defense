@@ -1,0 +1,6 @@
+cache-path;C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Release\100\lp\10\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Release\100\lp\10\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Release\100\lp\10\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Release\100\lp\10\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;obj\Release\100\res\values\strings.xml
+string;obj\Release\100\res\values\strings.xml
