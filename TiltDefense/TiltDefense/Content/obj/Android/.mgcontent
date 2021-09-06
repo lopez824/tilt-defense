@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Android</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMusic.mp3</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Human.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Map1.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Monster.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/pikachu.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/QuitButton.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/StartButton.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/TitleScreenBg.jpg</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

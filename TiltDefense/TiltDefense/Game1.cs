@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 using Xamarin.Essentials;
 using Android.Util;     // used to access logcat (Android output)
+using MonoGame.Extended.Screens;
+using MonoGame.Extended.Screens.Transitions;
+using Microsoft.Xna.Framework.Media;
 
 namespace TiltDefense
 {
@@ -12,12 +16,14 @@ namespace TiltDefense
     {
         private GraphicsDeviceManager _graphics;
         private NativeAPI nativeAPI;
-        private SpriteBatch _spriteBatch;
+        public SpriteBatch _spriteBatch;
+        private readonly ScreenManager _screenManager;
 
+        private Song backgroundMusic;
         private Texture2D mapTexture;
         private Texture2D pillarTexture;
-
         private Texture2D[] characterTextures = new Texture2D[2];
+
         private Vector2[] spawnPositions = new Vector2[3];
         private Vector2[] pillarPositions = new Vector2[2];
         private Color[] pillarColors = new Color[2];
@@ -33,13 +39,21 @@ namespace TiltDefense
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _screenManager = new ScreenManager();
             Content.RootDirectory = "Content";
+            Components.Add(_screenManager);
             IsMouseVisible = true;
+        }
+
+        private void LoadTitleScreen()
+        {
+            _screenManager.LoadScreen(new TitleScreen(this), new FadeTransition(GraphicsDevice, Color.Black));
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+
+            LoadTitleScreen();
 
             nativeAPI = new NativeAPI();
             nativeAPI.Init();
@@ -64,8 +78,9 @@ namespace TiltDefense
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            backgroundMusic = Content.Load<Song>("BackgroundMusic");
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(backgroundMusic);
             mapTexture = Content.Load<Texture2D>("Map1");
             pillarTexture = Content.Load<Texture2D>("Pillars");
             characterTextures[0] = Content.Load<Texture2D>("Human");
@@ -73,12 +88,7 @@ namespace TiltDefense
         }
 
         protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            // TODO: Add your update logic here
-
+        {  
             if (!pillarsCreated)
             {
                 for (int i = 0; i < pillarPositions.Length; i++)
@@ -108,12 +118,12 @@ namespace TiltDefense
                         if (pillar.name == "Red")
                         {
                             test1++;
-                            Log.Info("debuglog", $"HIT RED {test1} times");
+                          //  Log.Info("debuglog", $"HIT RED {test1} times");
                         }
                         else if (pillar.name == "Yellow")
                         {
                             test2++;
-                            Log.Info("debuglog", $"HIT YELLOW {test2} times");
+                           // Log.Info("debuglog", $"HIT YELLOW {test2} times");
                         }
                     }
                 }
@@ -140,7 +150,7 @@ namespace TiltDefense
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
 
