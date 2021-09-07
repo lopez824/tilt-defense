@@ -185,10 +185,6 @@ C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Deb
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\TiltDefense.csproj.AssemblyReference.cache
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\res.flag
-C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\10\jl\files.cache
-C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\13\jl\files.cache
-C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\14\jl\files.cache
-C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\15\jl\files.cache
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\R.txt
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\R.cs.flag
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\TiltDefense.csproj.CoreCompileInputs.cache
@@ -363,3 +359,7 @@ C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Deb
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\android\assets\System.Web.Services.pdb
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\android\assets\System.Xml.Linq.dll
 C:\Users\Hisham Jaffar\Source\Repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\android\assets\System.Xml.Linq.pdb
+C:\Users\Hisham Jaffar\source\repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\10\jl\files.cache
+C:\Users\Hisham Jaffar\source\repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\13\jl\files.cache
+C:\Users\Hisham Jaffar\source\repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\14\jl\files.cache
+C:\Users\Hisham Jaffar\source\repos\tilt-defense\TiltDefense\TiltDefense\obj\Debug\100\lp\15\jl\files.cache

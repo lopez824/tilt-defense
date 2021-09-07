@@ -43,6 +43,18 @@
 /processorParam:TextureFormat=Color
 /build:Church.png
 
+#begin Hit Enemy.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Hit Enemy.wav
+
+#begin Hit Human.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Hit Human.wav
+
 #begin House1.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -91,6 +103,12 @@
 /processorParam:TextureFormat=Color
 /build:House4.png
 
+#begin Human Passes.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Human Passes.wav
+
 #begin Human.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -103,6 +121,24 @@
 /processorParam:TextureFormat=Color
 /build:Human.png
 
+#begin HumanWalkingAnim.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HumanWalkingAnim.png
+
+#begin Monster Passes.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Monster Passes.wav
+
 #begin Monster.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -114,6 +150,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Monster.png
+
+#begin MonsterDeathAnim.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MonsterDeathAnim.png
+
+#begin MonsterWalkingAnim.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MonsterWalkingAnim.png
 
 #begin pikachu.png
 /importer:TextureImporter

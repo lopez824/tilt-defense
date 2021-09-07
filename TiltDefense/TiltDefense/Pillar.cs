@@ -11,77 +11,54 @@ public class Pillar
     public Vector2 position;
     public Vector2 initialPosition;
     public Rectangle hitBox;
+    public Rectangle collisionBox;
     public string name;
 
     private Color color;
+    private int ID;
     private float offSet = 150f;
     private float speed = 500f;
 
-    public Pillar(Texture2D newTexture, Vector2 newPosition, Color newColor)
+    public Pillar(Texture2D newTexture, Vector2 newPosition, Color newColor,int pillarID)
     {
         texture = newTexture;
         initialPosition = newPosition;
         position = newPosition;
+        ID = pillarID;
         color = newColor;
         setName();
     }
 
     public void setName()
     {
-        if (color.Equals(Color.Yellow))
+        if (ID.Equals(1))
         {
-            name = "Yellow";
+            name = "First";
         }
-        else if (color.Equals(Color.Blue))
+        else if (ID.Equals(2))
         {
-            name = "Blue";
-        }
-        else if (color.Equals(Color.Green))
-        {
-            name = "Green";
-        }
-        else if (color.Equals(Color.Red))
-        {
-            name = "Red";
+            name = "Second";
         }
     }
 
     public void checkBounds()
     {
-        if (name == "Green" && position.X <= -155)
+        if (name == "Second" && position.X <= -280)
         {
-            position.X = -155;
+            position.X = -280;
         }
-        else if (name == "Green" && position.X >= 160)
+        else if (name == "Second" && position.X >=-115)
         {
-            position.X = 160;
-        }
-
-        if (name == "Yellow" && position.X <= -155)
-        {
-            position.X = -155;
-        }
-        else if (name == "Yellow" && position.X >= 160)
-        {
-            position.X = 160;
+            position.X = -115;
         }
 
-        if (name == "Blue" && position.X >= 1120)
+        if (name == "First" && position.X >= 775)
         {
-            position.X = 1120;
+            position.X = 775;
         }
-        else if (name == "Blue" && position.X <= 800)
+        else if (name == "First" && position.X < 615)
         {
-            position.X = 800;
-        }
-
-        if (name == "Red" && position.X >= 1120)
-        {
-            position.X = 1120;
-        }
-        else if (name == "Red" && position.X < 800)
-        {
-            position.X = 800;
+            position.X = 615;
         }
     }
 
@@ -105,17 +82,17 @@ public class Pillar
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        
-        // only draw the red and yellow pillars, offSets is for adjusting the collider
-        if (name == "Red")
+        if (name == "First")
         {
-            hitBox = new Rectangle((int)position.X, (int)position.Y, texture.Width, 100);
-            spriteBatch.Draw(texture, hitBox, null, color, 0f, new Vector2((texture.Width / 2) - offSet, texture.Height / 2), SpriteEffects.None, 0f);
+            hitBox = new Rectangle((int)position.X, (int)position.Y, 500, 225);
+            collisionBox= new Rectangle((int)position.X+50, (int)position.Y+100, 500, 225);
+            spriteBatch.Draw(texture, hitBox, null, color);
         }
-        else if (name == "Yellow")
+        else if (name == "Second")
         {
-            hitBox = new Rectangle((int)position.X - 320, (int)position.Y, texture.Width, 100);
-            spriteBatch.Draw(texture, hitBox, null, color, 0f, new Vector2((texture.Width / 2) - offSet - 20, texture.Height / 2), SpriteEffects.None, 0f);
+            hitBox = new Rectangle((int)position.X, (int)position.Y, 500, 225);
+            collisionBox = new Rectangle((int)position.X-50, (int)position.Y+100, 500, 225);
+            spriteBatch.Draw(texture, hitBox, null, color);
         }
     }
 }

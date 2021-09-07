@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hisham Jaffar\\Source\\Repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {}
+    "C:\\Users\\Hisham Jaffar\\source\\repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hisham Jaffar\\Source\\Repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {
+    "C:\\Users\\Hisham Jaffar\\source\\repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hisham Jaffar\\Source\\Repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
+        "projectUniqueName": "C:\\Users\\Hisham Jaffar\\source\\repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
         "projectName": "TiltDefense",
-        "projectPath": "C:\\Users\\Hisham Jaffar\\Source\\Repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
+        "projectPath": "C:\\Users\\Hisham Jaffar\\source\\repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
         "packagesPath": "C:\\Users\\Hisham Jaffar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hisham Jaffar\\Source\\Repos\\tilt-defense\\TiltDefense\\TiltDefense\\obj\\",
+        "outputPath": "C:\\Users\\Hisham Jaffar\\source\\repos\\tilt-defense\\TiltDefense\\TiltDefense\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

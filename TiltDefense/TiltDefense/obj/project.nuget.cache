@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W6GYaYsaOd+LNLZT7oYPpfE3tLmEpzt0wf+vqjwS2dUobp1/Q73L2S/JX4Etnrh4au2zZ3ZIZo1+UD6euLpI8w==",
+  "dgSpecHash": "YnS6WKdYKpYGcAfqm9WLPtGOvTcqdP7zWtng7F7floY4YqWf0Uu/2v5sQvM460vKxr11Ja8asOWPMWLV95cx/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hisham Jaffar\\Source\\Repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
+  "projectFilePath": "C:\\Users\\Hisham Jaffar\\source\\repos\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hisham Jaffar\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
     "C:\\Users\\Hisham Jaffar\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
