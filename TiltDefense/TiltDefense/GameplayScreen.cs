@@ -17,13 +17,16 @@ namespace TiltDefense
 
         private new Game1 Game => (Game1)base.Game;
         private NativeAPI nativeAPI;
+        private Timer timer;
+        private Score score;
         public GameplayScreen(Game1 game) : base(game) { }
 
+        private SpriteFont uiFont;
         private Texture2D mapTexture;
         private Texture2D pillarTexture;
         private Texture2D[] characterTextures = new Texture2D[2];
 
-        private Vector2[] spawnPositions = new Vector2[3];
+        private Vector2[] spawnPositions = new Vector2[2];
         private Vector2[] pillarPositions = new Vector2[2];
         private Color[] pillarColors = new Color[2];
 
@@ -39,10 +42,11 @@ namespace TiltDefense
         {
             nativeAPI = new NativeAPI();
             nativeAPI.Init();
-
+            timer = new Timer(600);
+            score = new Score();
+            
             spawnPositions[0] = new Vector2(GraphicsDevice.Viewport.Width / 4 - 25, 0);
-            spawnPositions[1] = new Vector2(GraphicsDevice.Viewport.Width / 2, 0);
-            spawnPositions[2] = new Vector2((3 * (GraphicsDevice.Viewport.Width / 4)) + 25, 0);
+            spawnPositions[1] = new Vector2((3 * (GraphicsDevice.Viewport.Width / 4)) + 25, 0);
 
             pillarPositions[0] = new Vector2(0, GraphicsDevice.Viewport.Height * 0.8f);
             //pillarPositions[1] = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height * 0.6f);
@@ -54,7 +58,8 @@ namespace TiltDefense
             //pillarColors[2] = Color.Green;
             pillarColors[1] = Color.Red;
 
-            mapTexture = Content.Load<Texture2D>("Map1");
+            uiFont = Content.Load<SpriteFont>("Timer");
+            mapTexture = Content.Load<Texture2D>("BackgroundMap");
             pillarTexture = Content.Load<Texture2D>("Pillars");
             characterTextures[0] = Content.Load<Texture2D>("Human");
             characterTextures[1] = Content.Load<Texture2D>("Monster");
@@ -70,7 +75,7 @@ namespace TiltDefense
                 }
                 pillarsCreated = true;
             }
-
+            timer.Update(gameTime);
             spawnTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
             foreach (Character character in characters)
             {
@@ -104,7 +109,7 @@ namespace TiltDefense
             if (spawnTime >= 2)
             {
                 spawnTime = 0;
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < spawnPositions.Length; i++)
                 {
                     characters.Add(new Character(characterTextures[new Random().Next(0, 2)], spawnPositions[i]));
                 }
@@ -114,6 +119,14 @@ namespace TiltDefense
             {
                 if (!characters[i].isVisible)
                 {
+                    if (characters[i].texture == characterTextures[0])
+                    {
+                        score.ScoreValue++;
+                    }
+                    else if (characters[i].texture == characterTextures[1])
+                    {
+                        score.ScoreValue--;
+                    }
                     characters.RemoveAt(i);
                 }
             }
@@ -124,6 +137,8 @@ namespace TiltDefense
         {
             Game._spriteBatch.Begin();
             Game. _spriteBatch.Draw(mapTexture, new Rectangle(0, 0, GraphicsDevice.Viewport.Bounds.Width, GraphicsDevice.Viewport.Bounds.Height), Color.White);
+            Game._spriteBatch.DrawString(uiFont, "" + (int)timer.Time / 60 + ":" + (int)timer.Time % 60, new Vector2(GraphicsDevice.Viewport.Width / 2-100,150), Color.Black);
+            Game._spriteBatch.DrawString(uiFont, "" + score.ScoreValue, new Vector2(GraphicsDevice.Viewport.Width/2-10, 0), Color.Black);
             foreach (Character character in characters)
             {
                 character.Draw(Game._spriteBatch);

@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin BackgroundMap.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BackgroundMap.jpg
+
 #begin BackgroundMusic.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
@@ -30,18 +42,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Human.png
-
-#begin Map1.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Map1.png
 
 #begin Monster.png
 /importer:TextureImporter
@@ -102,6 +102,13 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:StartButton.png
+
+#begin Timer.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Timer.spritefont
 
 #begin TitleScreenBg.jpg
 /importer:TextureImporter
