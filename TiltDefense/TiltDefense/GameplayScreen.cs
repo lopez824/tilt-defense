@@ -23,6 +23,7 @@ namespace TiltDefense
 
         private SpriteFont uiFont;
         private Texture2D mapTexture;
+        private Texture2D church;
         private Texture2D pillarTexture;
         private Texture2D[] characterTextures = new Texture2D[2];
 
@@ -60,6 +61,7 @@ namespace TiltDefense
 
             uiFont = Content.Load<SpriteFont>("Timer");
             mapTexture = Content.Load<Texture2D>("BackgroundMap");
+            church = Content.Load<Texture2D>("Church");
             pillarTexture = Content.Load<Texture2D>("Pillars");
             characterTextures[0] = Content.Load<Texture2D>("Human");
             characterTextures[1] = Content.Load<Texture2D>("Monster");
@@ -137,8 +139,9 @@ namespace TiltDefense
         {
             Game._spriteBatch.Begin();
             Game. _spriteBatch.Draw(mapTexture, new Rectangle(0, 0, GraphicsDevice.Viewport.Bounds.Width, GraphicsDevice.Viewport.Bounds.Height), Color.White);
+            Game._spriteBatch.Draw(church,new Rectangle(GraphicsDevice.Viewport.Width/2+10,GraphicsDevice.Viewport.Height/2,350,300),null,Color.White,0f,new Vector2(church.Width / 2, church.Height / 2),SpriteEffects.None,0f);
             Game._spriteBatch.DrawString(uiFont, "" + (int)timer.Time / 60 + ":" + (int)timer.Time % 60, new Vector2(GraphicsDevice.Viewport.Width / 2-100,150), Color.Black);
-            Game._spriteBatch.DrawString(uiFont, "" + score.ScoreValue, new Vector2(GraphicsDevice.Viewport.Width/2-10, 0), Color.Black);
+            Game._spriteBatch.DrawString(uiFont, "" + score.ScoreValue, new Vector2(GraphicsDevice.Viewport.Width/2-20, 0), Color.Black);
             foreach (Character character in characters)
             {
                 character.Draw(Game._spriteBatch);
