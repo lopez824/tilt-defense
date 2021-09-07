@@ -63,6 +63,7 @@
     <Compile Include="AnimationManager.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Collision.cs" />
+    <Compile Include="EndScreen.cs" />
     <Compile Include="GameplayScreen.cs" />
     <Compile Include="NativeAPI.cs" />
     <Compile Include="Game1.cs" />

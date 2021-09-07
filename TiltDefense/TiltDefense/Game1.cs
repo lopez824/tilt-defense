@@ -16,6 +16,7 @@ namespace TiltDefense
     {
         private GraphicsDeviceManager _graphics;
         public SpriteBatch _spriteBatch;
+        public int score;
         private readonly ScreenManager _screenManager;
 
         private Song backgroundMusic;
@@ -43,13 +44,22 @@ namespace TiltDefense
 
         public void LoadGameplayScreen()
         {
+            MediaPlayer.Volume = 0.3f;
             _screenManager.LoadScreen(new GameplayScreen(this), new FadeTransition(GraphicsDevice, Color.Black));
+        }
+
+        public void LoadEndScreen(int score)
+        {
+            this.score = score;
+            MediaPlayer.Volume = 0.1f;
+            _screenManager.LoadScreen(new EndScreen(this), new FadeTransition(GraphicsDevice, Color.Black));
         }
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             backgroundMusic = Content.Load<Song>("BackgroundMusic");
             MediaPlayer.IsRepeating = true;
+            MediaPlayer.Volume = 0.3f;
             MediaPlayer.Play(backgroundMusic);
            
         }

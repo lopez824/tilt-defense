@@ -91,7 +91,7 @@ public class Pillar
         else if (name == "Second")
         {
             hitBox = new Rectangle((int)position.X, (int)position.Y, 500, 225);
-            collisionBox = new Rectangle((int)position.X-50, (int)position.Y+100, 500, 225);
+            collisionBox = new Rectangle((int)position.X-50, (int)position.Y+100, 500, 125);
             spriteBatch.Draw(texture, hitBox, null, color);
         }
     }

@@ -7,6 +7,7 @@
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMap.jpg</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMusic.mp3</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Church.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/GameOverBg.jpg</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Hit Enemy.wav</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Hit Human.wav</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/House1.png</File>
@@ -23,6 +24,7 @@
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/pikachu.png</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Pillars.png</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/QuitButton.png</File>
+    <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/SecondUIFont.spritefont</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/StartButton.png</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Timer.spritefont</File>
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/TitleScreenBg.jpg</File>
@@ -31,6 +33,8 @@
     <File>C:/Users/Hisham Jaffar/source/repos/tilt-defense/TiltDefense/TiltDefense/Content/Tree2.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

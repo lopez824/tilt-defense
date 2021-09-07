@@ -20,7 +20,7 @@ namespace TiltDefense
         private new Game1 Game => (Game1)base.Game;
         private NativeAPI nativeAPI;
         private Timer timer;
-        private Score score;
+        public Score score;
         public GameplayScreen(Game1 game) : base(game) { }
 
         private SpriteFont uiFont;
@@ -48,12 +48,11 @@ namespace TiltDefense
 
         private float spawnTime = 0f;
         private bool pillarsCreated = false;
-
         public override void LoadContent()
         {
             nativeAPI = new NativeAPI();
             nativeAPI.Init();
-            timer = new Timer(600);
+            timer = new Timer(120);
             score = new Score();
 
             spawnPositions[0] = new Vector2(GraphicsDevice.Viewport.Width / 4 - 45, 0);
@@ -97,6 +96,10 @@ namespace TiltDefense
                 pillarsCreated = true;
             }
             timer.Update(gameTime);
+            if(timer.Time<=0)
+            {
+                Game.LoadEndScreen(score.ScoreValue);
+            }
             spawnTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
             foreach (Character character in characters)
             {
