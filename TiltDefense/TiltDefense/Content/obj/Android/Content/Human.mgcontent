@@ -3,7 +3,11 @@
   <SourceFile>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/Human.png</SourceFile>
   <SourceTime>2021-09-06T11:52:03.8717061-06:00</SourceTime>
   <DestFile>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/Human.xnb</DestFile>
+<<<<<<< HEAD
   <DestTime>2021-09-06T19:25:05.4184989-06:00</DestTime>
+=======
+  <DestTime>2021-09-06T18:16:56.8465882-06:00</DestTime>
+>>>>>>> UpgradeGameplay
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T10:17:54-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -3,7 +3,11 @@
   <SourceFile>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMusic.mp3</SourceFile>
   <SourceTime>2021-09-06T17:49:28.5276804-06:00</SourceTime>
   <DestFile>C:/Users/Hisham Jaffar/Source/Repos/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/BackgroundMusic.xnb</DestFile>
+<<<<<<< HEAD
   <DestTime>2021-09-06T19:25:05.3314909-06:00</DestTime>
+=======
+  <DestTime>2021-09-06T18:16:57.889664-06:00</DestTime>
+>>>>>>> UpgradeGameplay
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2020-08-10T10:17:54-06:00</ImporterTime>
   <Processor>SongProcessor</Processor>
