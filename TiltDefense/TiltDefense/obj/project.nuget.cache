@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "agG+d+y6xTTDi2Xh1uvkGS9PMUutm9soaktLIn2nIpVSNibY+eSEP/7pxEbrA0CuvS2ToEGjDHh+BMmTxa1yaA==",
+  "dgSpecHash": "c8wVEziyFlIWCs1OiXCVT0+Q0Mct0/GJktz13X4dcu/o+n0NP4nLvQ2yCAgcdTGKiB9CvF9sYiPsPtX3BICqzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lopez\\Documents\\GitHub\\tilt-defense\\TiltDefense\\TiltDefense\\TiltDefense.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lopez\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\lopez\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
     "C:\\Users\\lopez\\.nuget\\packages\\monogame.framework.android\\3.8.0.1641\\monogame.framework.android.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\lopez\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\lopez\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\lopez\\.nuget\\packages\\xamarin.androidx.annotation\\1.1.0.9\\xamarin.androidx.annotation.1.1.0.9.nupkg.sha512",
     "C:\\Users\\lopez\\.nuget\\packages\\xamarin.androidx.arch.core.common\\2.1.0.8\\xamarin.androidx.arch.core.common.2.1.0.8.nupkg.sha512",

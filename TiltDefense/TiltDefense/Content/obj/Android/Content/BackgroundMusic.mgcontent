@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/BackgroundMusic.mp3</SourceFile>
+  <SourceTime>2021-09-07T09:16:31.212509-06:00</SourceTime>
+  <DestFile>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/BackgroundMusic.xnb</DestFile>
+  <DestTime>2021-09-07T09:21:31.5405965-06:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2020-08-10T10:17:54-06:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2020-08-10T10:17:54-06:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/lopez/Documents/GitHub/tilt-defense/TiltDefense/TiltDefense/Content/bin/Android/Content/BackgroundMusic.m4a</string>
+  </BuildOutput>
+</PipelineBuildEvent>

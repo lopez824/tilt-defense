@@ -3,7 +3,9 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "TiltDefense.dll" comes first in this list. */
 		"TiltDefense.dll",
+		"MonoGame.Extended.dll",
 		"MonoGame.Framework.dll",
+		"Newtonsoft.Json.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.Arch.Core.Common.dll",
 		"Xamarin.AndroidX.Browser.dll",
